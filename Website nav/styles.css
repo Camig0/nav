@@ -1,0 +1,211 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --header-height: 10vh;
+    --header-logo-size:4vw;
+}
+
+body{
+    background-color:rgb(54, 69, 63) ;
+    background-image:url(assets/Space.png) ;
+    background-size: cover;
+
+    min-height: 100vh;
+}
+
+
+.logo, .logo img{
+    height: var(--header-logo-size);
+    width: calc(var(--header-logo-size)+ 2%);
+    min-height: 30px;
+    min-width: 30px;
+    max-width: calc(70px + 2%);
+    max-height:  70px;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+header {
+    height: var(--header-height);
+    width:100%;
+
+    background: rgb(1,29,16);
+    background: linear-gradient(180deg, rgb(5, 38, 17) 0%, rgba(0,212,255,0) 100%);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1% 2%;
+}
+
+
+@keyframes example {
+    0%{
+        height: 0;
+        width: 0;
+        border: rgb(255, 255, 255,0) solid 4px;
+        
+    }
+    25%{
+        height: 30px;
+        width: 30px;
+        border: rgb(255, 255, 255) solid 4px;
+    }
+
+    100%{
+        height: 50px;
+        width: 50px;
+        border: rgb(255, 255, 255,0) solid 4px;
+        
+    }
+}
+.nav{
+    position: relative;
+    color: white;
+    justify-content: center;
+    z-index: 100;
+
+}
+nav{    
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size:  1rem;
+    gap: 40px;
+    a{
+        position: relative;
+        justify-content: center;
+        z-index: 100;
+        font-size: 1.4rem;
+
+        display: flex;
+        transition: all 0.2s
+    }
+    a:hover{
+        color:white;
+        bottom: 3px;
+        transition: all 0.2s;
+        }
+    a::before{
+        content:'';
+        position:absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        z-index: 199;
+
+        height: 0;
+        width: 0;
+        border-radius: 100%;
+        border: rgb(255, 255, 255,0) solid 4px;
+    }
+
+    
+    a:hover::before{
+    
+        /* animation-name: size-in-out;
+        animation-duration: 1s; */
+        animation: example 0.8s;
+        animation-duration: 0.8s;
+        /* border: rgb(255, 255, 255) solid 4px     */
+     }
+    } 
+
+.mobile_header {
+    display: none;
+}
+
+
+@keyframes slide_out {
+    0%{
+        right: 0;
+    }
+    100%{
+        right: 12px;
+    }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+    .desktop_header{
+        display: none;
+    }
+    .mobile_header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .mobile_nav{
+        padding:10px;
+        position:relative;
+    }
+    .nav_button{
+        cursor: pointer;
+    }
+    .main_nav{
+        --nav_width:50vw;
+
+        display: none;
+
+        width: var(--nav_width);
+        min-width: 100px;
+        background-color: rgba(22, 68, 39, 0.5);
+        backdrop-filter: blur(5px);
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.05);
+/* 
+        padding-block: 30%;
+        padding-inline: 20%; */
+
+        position: fixed;
+        top: 0px;
+        right:0vw;
+        height: 100dvh;
+        z-index: 999;
+
+        li{
+            font-size: 3.5vw;
+            list-style: none;
+
+            padding: 4% 10%;
+            display: flex;
+            align-items: center;
+
+            transition: 0.2s;
+
+        }
+        li a{
+            width:100%;
+        }
+        
+        li:hover{
+            background-color: rgba(0, 255, 55, 0.176);
+            animation-name: slide_out;
+            animation-duration: 0.5s;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1100px) {
+    body{
+        background-size:100%;
+        background-repeat: no-repeat;
+    }
+}
+
+
+
+
+
