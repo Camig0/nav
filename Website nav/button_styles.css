@@ -1,0 +1,16 @@
+.button_slice{
+    background-color: black;
+}
+.button_slice::before{
+    content: none;
+    background-color: aliceblue;
+    height: 100px;
+    width: 50px;
+
+    position: absolute;
+    
+}
+
+.button_slice::after{
+    content: none;
+}

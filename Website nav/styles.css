@@ -152,7 +152,7 @@ button{
     cursor: pointer;
     border-color: white;
     border-style:outset;
-    font-size: 1vw;
+    font-size: 1.5vw;
     font-weight: 600;
     background-color: var(--green);
     border-radius: 2vw;
