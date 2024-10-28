@@ -10,7 +10,6 @@
 
 body{
     background-color:rgb(54, 69, 63) ;
-    background-image:url(assets/Space.png) ;
     background-size: cover;
     color: white;
 
@@ -26,6 +25,17 @@ body{
     min-width: 30px;
     max-width: calc(70px + 2%);
     max-height:  70px;
+}
+.site-background-container{
+    width: 100vw;
+    position:absolute;
+    z-index: -2;
+    top: 0px;
+}
+.hero-img{
+    position: relative;
+    width:100vw;
+    z-index: inherit;
 }
 
 a{
