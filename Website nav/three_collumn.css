@@ -16,7 +16,8 @@
 .three-collumn{
 
     position: relative;
-    top: 250px;
+    margin-top: 25vw;
+    margin-bottom: 10vw;
     margin-inline:calc(var(--logo-size)/2) ;
     display: flex;
     gap:calc(var(--logo-size)/2);
@@ -50,12 +51,12 @@ background: linear-gradient(232deg, rgba(8,113,64,1) 0%, rgba(7,128,64,1) 11%, r
     border-radius: 5vh;
     background-color: rgba(36, 70, 55, 0.656);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-    transform: rotateX(0deg);
-    transition: 0.5s ease-out;
+    transform: rotateX(7deg);
+    transition: .2s ease-out;
 }
 
 .card:hover {
-    transition: 0.2s ease-out;
+    transition: .2s ease-out;
     transform: scale3d(1, 1, 1) rotateX(5deg) translateZ(calc(var(--logo-size)/2));
     box-shadow: 5px 16px 30px rgba(0, 0, 0, 0.424);
 }
